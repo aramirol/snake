@@ -1,4 +1,4 @@
-# Tic Tac Toe
+# Snake
 
 [![Docker Image CI](https://github.com/aramirol/snake/actions/workflows/docker-image.yml/badge.svg)](https://github.com/aramirol/snake/actions/workflows/docker-image.yml)
 
