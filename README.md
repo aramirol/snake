@@ -17,6 +17,14 @@ This game was develeped using **[ChatGPT](https://openai.com/chatgpt)**.
 
 <img src="https://aramirol.github.io/custom-resources/images/snake.png" width="49%" />
 
+## Requirements
+
+You must need `python` installed and the library pygame.
+
+```
+pip install --upgrade pygame
+```
+
 ## How to
 
 To join this game just follow these steps:
@@ -25,12 +33,6 @@ To join this game just follow these steps:
 $ git clone https://github.com/aramiol/snake.git
 $ cd snake
 $ python snake.py
-```
-
-You must need python installed and the library pygame.
-
-```
-pip install --upgrade pygame
 ```
 
 ## License
