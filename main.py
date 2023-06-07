@@ -1,12 +1,11 @@
 import pygame
-import time
 import random
 
-# Dimensiones de la pantalla
+# Screen dimensions
 width = 800
 height = 600
 
-# Colores RGB
+# RGB Colours
 white = (255, 255, 255)
 green = (0, 255, 0)
 red = (255, 0, 0)
@@ -14,13 +13,13 @@ black = (0, 0, 0)
 
 pygame.init()
 
-# Crear ventana de juego
+# Create game window
 window = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Snake Game")
 
 clock = pygame.time.Clock()
 
-snake_block = 20  # Tamaño de la serpiente
+snake_block = 20  # Snake size
 snake_speed = 15
 
 font_style = pygame.font.SysFont(None, 35)
@@ -46,21 +45,21 @@ def game_loop():
     game_over = False
     game_close = False
 
-    # Posición inicial de la serpiente
+    # Initial position of the snake
     x1 = width / 2
     y1 = height / 2
 
-    # Cambio en la posición de la serpiente
+    # Change in snake's position
     x1_change = 0
     y1_change = 0
 
-    # Cuerpo de la serpiente
+    # Snake's body
     snake_List = []
     Length_of_snake = 1
 
-    # Posición aleatoria de la manzana
-    foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0  # Tamaño de la manzana
-    foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0  # Tamaño de la manzana
+    # Random position of the apple
+    foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0  # Apple size
+    foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0  # Apple size
 
     while not game_over:
 
@@ -120,8 +119,8 @@ def game_loop():
         pygame.display.update()
 
         if x1 == foodx and y1 == foody:
-            foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0  # Tamaño de la manzana
-            foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0  # Tamaño de la manzana
+            foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0  # Apple size
+            foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0  # Apple size
             Length_of_snake += 1
 
         clock.tick(snake_speed)
