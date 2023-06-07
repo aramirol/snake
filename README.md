@@ -1,6 +1,6 @@
 # Snake
 
-[![Docker Image CI](https://github.com/aramirol/snake/actions/workflows/docker-image.yml/badge.svg)](https://github.com/aramirol/snake/actions/workflows/docker-image.yml)
+[![Python application](https://github.com/aramirol/snake/actions/workflows/python-app.yml/badge.svg)](https://github.com/aramirol/snake/actions/workflows/python-app.yml)
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=aramirol_snake&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=aramirol_snake)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=aramirol_snake&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=aramirol_snake)
