@@ -19,25 +19,18 @@ This game was develeped using **[ChatGPT](https://openai.com/chatgpt)**.
 
 ## How to
 
-Use the `Dockerfile` to quickly deploy the game. The image used is python:3.9, exposing the port 8000.
+To join this game just follow these steps:
 
-```sh
-$ sudo docker run -d -p 8000:8000 aramirol/snake:latest
+```
+$ git clone https://github.com/aramiol/snake.git
+$ cd snake
+$ python snake.py
 ```
 
-If you prefer, you can use the `deployment.yaml` file to deploy the game to Kubernetes. This file creates all the necessary components (remember to change the values to fit your environment)
+You must need python installed and the library pygame.
 
-```sh
-$ kubectl apply -f deployment.yaml
 ```
-
-```yml
-spec:
-      containers:
-        - name: tictactoe
-          image: aramirol/snake:latest
-          ports:
-            - containerPort: 8000
+pip install --upgrade pygame
 ```
 
 ## License
