@@ -1,5 +1,5 @@
 import pygame
-import random
+import secrets
 
 # Screen dimensions
 width = 800
@@ -58,8 +58,9 @@ def game_loop():
     Length_of_snake = 1
 
     # Random position of the apple
-    foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0  # Apple size
-    foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0  # Apple size
+    foodx = round(secrets.randbelow((width - snake_block) // 20) * 20)  # Apple size
+    foody = round(secrets.randbelow((height - snake_block) // 20) * 20)  # Apple size
+
 
     while not game_over:
 
@@ -118,9 +119,10 @@ def game_loop():
 
         pygame.display.update()
 
+        # Check if snake head reaches the food
         if x1 == foodx and y1 == foody:
-            foodx = round(random.randrange(0, width - snake_block) / 20.0) * 20.0  # Apple size
-            foody = round(random.randrange(0, height - snake_block) / 20.0) * 20.0  # Apple size
+            foodx = round(secrets.randbelow((width - snake_block) // 20) * 20)  # Apple size
+            foody = round(secrets.randbelow((height - snake_block) // 20) * 20)  # Apple size
             Length_of_snake += 1
 
         clock.tick(snake_speed)
